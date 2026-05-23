@@ -406,6 +406,108 @@ section{position:relative;z-index:10}
   }
 }
 
+
+
+/* WHAT I BRING SECTION */
+#strengths-section{
+  padding:1.5rem 0 4rem;
+  position:relative;
+}
+
+.strengths-wrapper{
+  border:1px solid rgba(139,92,246,0.15);
+  background:linear-gradient(135deg,rgba(139,92,246,0.06),rgba(56,189,248,0.03));
+  backdrop-filter:blur(18px);
+  border-radius:28px;
+  padding:2.5rem;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:2rem;
+  align-items:center;
+  position:relative;
+  overflow:hidden;
+}
+
+.strengths-wrapper::before{
+  content:'';
+  position:absolute;
+  width:260px;
+  height:260px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(56,189,248,0.08),transparent 70%);
+  top:-100px;
+  right:-80px;
+}
+
+.strengths-title{
+  font-family:'Syne',sans-serif;
+  font-size:clamp(2.2rem,4vw,4rem);
+  line-height:0.95;
+  letter-spacing:-0.05em;
+  margin-bottom:1rem;
+  color:#fff;
+  max-width:500px;
+}
+
+.strengths-title span{
+  background:linear-gradient(135deg,var(--blue),var(--purple));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.strengths-desc{
+  color:var(--text2);
+  font-size:14px;
+  line-height:1.8;
+  max-width:500px;
+}
+
+.strengths-tags{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:1rem;
+}
+
+.strength-chip{
+  padding:0.95rem 1rem;
+  border-radius:16px;
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(56,189,248,0.12);
+  color:#fff;
+  font-family:'JetBrains Mono',monospace;
+  font-size:13px;
+  transition:all 0.25s ease;
+  backdrop-filter:blur(10px);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  min-height:70px;
+}
+
+.strength-chip:hover{
+  transform:translateY(-3px);
+  border-color:var(--blue);
+  box-shadow:0 10px 24px rgba(56,189,248,0.12);
+}
+
+@media(max-width:900px){
+  .strengths-wrapper{
+    grid-template-columns:1fr;
+    padding:2rem;
+  }
+
+  .strengths-tags{
+    grid-template-columns:1fr;
+  }
+
+  .strengths-title{
+    font-size:3rem;
+  }
+}
+
+
+
 /* PROJECTS */
 #projects{padding:8rem 0}
 .projects-grid{
@@ -916,34 +1018,41 @@ footer span{color:var(--blue)}
 </section>
 
 
-<!-- CURRENTLY LEARNING -->
-<section id="learning-section">
+
+
+
+
+
+<!-- WHAT I BRING -->
+<section id="strengths-section">
   <div class="container">
-    <div class="learning-wrapper reveal">
-      <div class="learning-left">
-        
-        <h2 class="learning-title">
-          Learning <span>Next-Gen</span><br>
-          Technologies
+    <div class="strengths-wrapper reveal">
+
+      <div class="strengths-left">
+        <h2 class="strengths-title">
+          What I <span>Bring</span><br>
+          to the Table
         </h2>
-        <p class="learning-desc">
-          Constantly evolving through modern technologies, scalable systems, and advanced development practices to build impactful software experiences.
+
+        <p class="strengths-desc">
+          Combining strong problem-solving skills, modern development practices, and engineering fundamentals to build scalable, intelligent, and impactful digital experiences.
         </p>
       </div>
 
-      <div class="learning-tags">
-        <div class="learn-chip">⚡ System Design</div>
-        <div class="learn-chip">▲ Next.js</div>
-        <div class="learn-chip">TS TypeScript</div>
-        <div class="learn-chip">☁ AWS Cloud</div>
-        <div class="learn-chip">🧠 DSA Mastery</div>
-        <div class="learn-chip">🌐 Full Stack Mastery</div>
-        <div class="learn-chip">🤖 AI Integrations</div>
+      <div class="strengths-tags">
+        <div class="strength-chip">⚡ Problem Solving & DSA</div>
+        <div class="strength-chip">🌐 Full Stack Development</div>
+        <div class="strength-chip">🤖 AI-Driven Thinking</div>
+        <div class="strength-chip">⚙ Scalable Application Building</div>
+        <div class="strength-chip">🎨 Clean UI/UX Engineering</div>
+        <div class="strength-chip">🚀 Fast Adaptability</div>
+        <div class="strength-chip">📚 Strong CS Fundamentals</div>
+        <div class="strength-chip">💡 Real-World Project Experience</div>
       </div>
+
     </div>
   </div>
 </section>
-
 
 
 <!-- PROJECTS -->
